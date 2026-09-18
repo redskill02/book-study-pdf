@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>표지 · 차례 · 사용법</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.toc table { page-break-inside: auto; width: 100%; border-collapse: collapse; font-size: 9.2pt; }
+.toc tr { page-break-inside: avoid; }          /* 표 전체에 avoid 를 걸면 빈 쪽이 생긴다 (함정 #8) */
+.toc th { background: #1f2937; color: #fff; padding: 4px 6px; text-align: left; }
+.toc td { border-bottom: 1px solid #e5e7eb; padding: 4px 6px; vertical-align: top; }
+.toc td.c { text-align: center; }
+.toc tr.part td { background: #f3f4f6; font-weight: 800; color: #1f2937; }
+</style>
+</head><body>
+
+<!-- _front.html 은 checker 가 검사하지 않는다(함정 #47). 렌더로 본다. .meta 합계는 stats 의 '합계' 줄에서 옮긴다. -->
+<div class="cover">
+  <div class="sec">학습노트 &mdash; 전권 합본</div>
+  <h1>책 제목</h1>
+  <div class="lead">지은이 &middot; 출판사 (판차)<br>
+  책 a~b쪽을 <b>N권 + 총정리</b>로 나누어<br>
+  한글 도표 &middot; (원본 차트 &middot;) 4컷 만화 &middot; 쉬운 예시 &middot; 시험문제로 다시 정리했습니다.</div>
+  <div class="meta">전 N권 · 도표 000 · 만화 4컷 00편 · 예시 00 · 문항 000</div>
+</div>
+
+<h2>차례</h2>
+<div class="toc">
+<table>
+<tr><th style="width:8%">권</th><th>제목</th><th style="width:14%">책 쪽</th><th style="width:22%">분량</th></tr>
+<tr class="part"><td colspan="4">제1부 &mdash; 부 제목</td></tr>
+<tr><td class="c">1권</td><td>장 제목 &mdash; 부제</td><td class="c">11~30</td><td>14쪽 · 도표 10 · 문항 32</td></tr>
+<tr class="part"><td colspan="4">총정리</td></tr>
+<tr><td class="c">N권</td><td>총정리 &mdash; 지도 · 용어집 · 숫자 · 체크리스트 · 종합시험</td><td class="c">전권</td><td>19쪽 · 도표 9 · 문항 40</td></tr>
+</table>
+</div>
+<p class="small">권마다 <b>4컷 만화 2편 · 쉬운 예시 3개 · 덮고 쓰기 · 시험지 · 정답과 합격선 · 튜터 프롬프트</b>가 같은 순서로 들어 있습니다.
+각 권의 시험을 먼저 풀고 틀린 항목의 본문으로 돌아가는 방식이 가장 효율적입니다.</p>
+
+<h2>학습 계획 &mdash; N일 + 예비일</h2>
+<p>하루 한 권이 기준입니다. <b>&ldquo;오늘 꺼낼 것&rdquo;</b> 칸은 다시 읽기가 아니라 &mdash; 그날 덮고 쓰기에서 <b>빈칸이었던 항목</b>과 시험에서 <b>틀린 문항</b>만 다시 꺼내는 것입니다. 간격은 1일 &middot; 4일 &middot; 7일 &middot; 14일 전입니다.</p>
+<div class="plan">
+<table>
+<tr><th>일차</th><th>새로 배울 것</th><th>쪽</th><th>오늘 꺼낼 것</th><th>그날의 산출물</th></tr>
+<tr><td>1일차</td><td>1권 …</td><td class="c">14</td><td class="rev">&mdash;</td><td class="out">산출물 — 그 권의 설명형 문항이나 시험에서 뽑는다. "읽기"는 산출물이 아니다</td></tr>
+<tr><td>2일차</td><td>2권 …</td><td class="c">16</td><td class="rev"><b>1일 전(1권)</b> 빈칸</td><td class="out">…</td></tr>
+<tr><td>5일차</td><td>5권 …</td><td class="c">18</td><td class="rev"><b>1일 전(4권)</b> · <b>4일 전(1권)</b> 틀린 문항</td><td class="out">…</td></tr>
+<tr class="spare"><td>N일차</td><td colspan="2">예비일 &mdash; 밀린 것 보충</td><td class="rev">여기까지 표시해 둔 빈칸 전부</td><td>새 진도 없음</td></tr>
+<tr><td>N+1일차</td><td>총정리 · 종합시험</td><td class="c">19</td><td class="rev"><b>4일 전</b> · <b>7일 전</b> · <b>14일 전</b></td><td class="out">종합시험 합격선 이상</td></tr>
+</table>
+</div>
+
+<h2>이 노트를 쓰는 법</h2>
+<div class="kr-case">
+<h4><span class="tag">읽기 전에</span>이 노트에 대한 안내</h4>
+<p><b>출처</b> &mdash; 지은이, 『책 제목』, 출판사, 판차 · 발행일 · ISBN. 정리한 범위는 <b>책 a~b쪽</b>입니다. (스캔에 빠진 범위가 있으면 여기에 명시)</p>
+<p><b>용도</b> &mdash; 이 노트는 <b>구입자 본인의 개인 학습용</b>으로 만들었으며 <b>배포하지 않습니다.</b> 원문 인용은 이해를 돕기 위한 최소한으로 제한했고, 나머지는 재정리 · 요약 · 도해입니다. (판권면에 AI 사용 금지 문구가 있으면 그 사실도 적는다)</p>
+<p><b>도표에 대하여</b> &mdash; 원서에 없는 것은 <b>4컷 만화 · 쉬운 예시 · 시험문제 · 튜터 프롬프트</b>이고 나머지는 전부 원문에서 왔습니다. 도표 캡션마다 책 쪽을 적었습니다. (chart 책: 실제 차트는 원본을 그대로 실었고 한글 주석만 얹었습니다 · UI 화면은 한글 목업으로 다시 그렸으며 현재 화면과 다를 수 있습니다)</p>
+<p><b>숫자에 대하여</b> &mdash; 지수 · 금리 · 세율 · 제도는 책이 쓰인 시점의 값입니다. (translate 책: 달러 환산은 1달러 = 0,000원 기준)</p>
+<p><b>가장 먼저 할 일</b> &mdash; 이 책의 첫 행동 하나.</p>
+</div>
+
+</body></html>

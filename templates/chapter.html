@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>N권 — 장 제목 (책 a~b쪽)</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<!-- ============================================================
+  권(챕터) 골격.  순서 — 커버 → 본문(§1…) → 도표/만화/예시 → 덮고 쓰기 → 시험 → 정답+합격선 → 튜터.
+  커버 .meta 의 숫자는 build.py stats 가 글자 단위로 대조한다:
+     도표 = figure 수 − 만화 수(만화 지문 = SVG title 의 4컷-만화-지문) · 예시 = kr-case 수 · 시험문제 = q 클래스 수
+  이 골격 그대로면  도표 1 · 만화 4컷 1편 · 예시 1 · 시험문제 3 이다.
+  ============================================================ -->
+
+<div class="cover">
+  <div class="sec">N권 · 제N장 장 제목 (책 a~b쪽)</div>
+  <h1>이 권의 핵심을 한 문단으로 — 600자 이내. 넘으면 .meta 가 2쪽으로 밀린다.</h1>
+  <div class="lead">이 권에서 답하는 질문 — 1) … 2) … 3) …</div>
+  <div class="meta">도표 1 · 만화 4컷 1편 · 예시 1 · 시험문제 3</div>
+</div>
+
+<h2>§1 첫 절 제목 (책 a~c쪽)</h2>
+<p>한 문장에 주장 하나. 전문용어는 처음 나올 때 풀어 쓰고 괄호로 원어 병기(원어).</p>
+<div class="key">이 절의 핵심 명제 한 줄.</div>
+
+<!-- 도표 (3-box 형식, viewBox 690×150).  <text> 마다 font-size 필수 · 4.3pt 줄 ≤ 55자 · <text> 안에 <b> 금지 -->
+<figure>
+<div class="figbox">
+<svg viewBox="0 0 690 150" width="100%">
+<title>도표 1 — 한 줄 요약 (책 a~c쪽)</title>
+<rect x="8" y="8" width="674" height="18" rx="3" fill="#1e3a5f"/>
+<text x="345" y="20" font-size="6.2" font-weight="800" fill="#fff" text-anchor="middle">도표 제목 — 무엇을 보여 주는가 (책 a~c쪽 재구성)</text>
+<rect x="8" y="34" width="216" height="80" rx="3" fill="#e8eef6" stroke="#9db3cc"/>
+<text x="116" y="46" font-size="5.4" font-weight="800" fill="#1e3a5f" text-anchor="middle">상자 1 제목 (a)</text>
+<text x="116" y="58" font-size="4.3" fill="#374151" text-anchor="middle">줄 1 — 55자 이내</text>
+<text x="116" y="69" font-size="4.3" fill="#374151" text-anchor="middle">줄 2</text>
+<text x="116" y="80" font-size="4.3" fill="#374151" text-anchor="middle">줄 3</text>
+<text x="116" y="91" font-size="4.3" fill="#374151" text-anchor="middle">줄 4</text>
+<text x="116" y="106" font-size="4.5" font-weight="800" fill="#1e3a5f" text-anchor="middle">상자 1 결론</text>
+<rect x="236" y="34" width="216" height="80" rx="3" fill="#fff9c4" stroke="#e6d36b"/>
+<text x="344" y="46" font-size="5.4" font-weight="800" fill="#8a6d1f" text-anchor="middle">상자 2 제목 (b)</text>
+<text x="344" y="58" font-size="4.3" fill="#374151" text-anchor="middle">줄 1</text>
+<text x="344" y="69" font-size="4.3" fill="#374151" text-anchor="middle">줄 2</text>
+<text x="344" y="80" font-size="4.3" fill="#374151" text-anchor="middle">줄 3</text>
+<text x="344" y="91" font-size="4.3" fill="#374151" text-anchor="middle">줄 4</text>
+<text x="344" y="106" font-size="4.5" font-weight="800" fill="#8a6d1f" text-anchor="middle">상자 2 결론</text>
+<rect x="464" y="34" width="218" height="80" rx="3" fill="#fde8e8" stroke="#e0a0a0"/>
+<text x="573" y="46" font-size="5.4" font-weight="800" fill="#7f1d1d" text-anchor="middle">상자 3 제목 (c)</text>
+<text x="573" y="58" font-size="4.3" fill="#374151" text-anchor="middle">줄 1</text>
+<text x="573" y="69" font-size="4.3" fill="#374151" text-anchor="middle">줄 2</text>
+<text x="573" y="80" font-size="4.3" fill="#374151" text-anchor="middle">줄 3</text>
+<text x="573" y="91" font-size="4.3" fill="#374151" text-anchor="middle">줄 4</text>
+<text x="573" y="106" font-size="4.5" font-weight="800" fill="#7f1d1d" text-anchor="middle">상자 3 결론</text>
+<rect x="8" y="120" width="674" height="22" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+<text x="345" y="134" font-size="4.5" fill="#1f2937" text-anchor="middle">한 줄 결론 — 세 상자를 잇는 문장</text>
+</svg>
+</div>
+<figcaption><b>도표 1 &mdash; 제목.</b> 무엇을 보라. <span class="src">원본 1권 12쪽 재작도</span></figcaption>
+</figure>
+
+<!-- 원본 크롭 도표(주식·차트 도서 C유형)는 templates/chart-figure.html 을 여기 붙여 넣는다. -->
+
+<h2>§2 둘째 절 제목 (책 c~b쪽)</h2>
+<p>…</p>
+
+<!-- 4컷 만화 (viewBox 690×272 · 칸 4개 · 캡션 baseline 은 칸 바닥 − 8pt).
+     만화 지문 문자열은 SVG title 한 곳에만 — figcaption 이나 주석에 또 쓰면 stats 가 2배로 센다. -->
+<figure>
+<div class="figbox">
+<svg viewBox="0 0 690 272" width="100%">
+<title>4컷 만화로 재구성 — 일화 제목 (책 a~b쪽)</title>
+<rect x="8" y="16" width="164" height="220" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+<text x="90" y="36" font-size="10" font-weight="800" fill="#0f766e" text-anchor="middle">① 상황</text>
+<rect x="24" y="46" width="132" height="50" rx="4" fill="#fff" stroke="#c9ced5"/>
+<text x="90" y="62" font-size="7" fill="#1f2937" text-anchor="middle">&ldquo;말풍선 1행&rdquo;</text>
+<text x="90" y="74" font-size="7" fill="#1f2937" text-anchor="middle">말풍선 2행</text>
+<text x="90" y="86" font-size="7" fill="#1f2937" text-anchor="middle">말풍선 3행</text>
+<text x="90" y="200" font-size="7" fill="#374151" text-anchor="middle">칸 설명</text>
+<text x="90" y="222" font-size="7.5" font-weight="800" fill="#0f766e" text-anchor="middle">키워드</text>
+<rect x="180" y="16" width="164" height="220" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+<text x="262" y="36" font-size="10" font-weight="800" fill="#0f766e" text-anchor="middle">② 전개</text>
+<text x="262" y="222" font-size="7.5" font-weight="800" fill="#0f766e" text-anchor="middle">키워드</text>
+<rect x="352" y="16" width="164" height="220" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+<text x="434" y="36" font-size="10" font-weight="800" fill="#0f766e" text-anchor="middle">③ 전환</text>
+<text x="434" y="222" font-size="7.5" font-weight="800" fill="#0f766e" text-anchor="middle">키워드</text>
+<rect x="524" y="16" width="158" height="220" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+<text x="603" y="36" font-size="10" font-weight="800" fill="#0f766e" text-anchor="middle">④ 교훈</text>
+<text x="603" y="222" font-size="7.5" font-weight="800" fill="#0f766e" text-anchor="middle">키워드</text>
+<text x="345" y="258" font-size="7" fill="#374151" text-anchor="middle">네 칸을 잇는 한 줄 (책 a쪽)</text>
+</svg>
+</div>
+<figcaption><b>만화 1 &mdash; 일화 제목.</b> 이 일화가 본문의 어느 규칙을 보여 주는가.</figcaption>
+</figure>
+
+<!-- 예시 (translate: 한국 사례 / digest: 쉬운 예시).  <pre> 한 줄 ≤ 100단위(한글 2) · 표는 4열 이내 -->
+<div class="kr-case">
+<h4><span class="tag">쉬운 예시 1</span>K가 이 장의 규칙을 자기 숫자로 적어 본다 &mdash; 책 a~b쪽 (숫자는 가정)</h4>
+<p>상황 한 줄.</p>
+<pre>
+항목          책의 규칙(쪽)            K의 숫자          판정
+──────────  ──────────────────  ─────────────  ──────────
+행 1          …                    …               …
+행 2          …                    …               …
+
+K의 결론: 두 줄 이내.
+</pre>
+<p>K가 배운 것 &mdash; 한 줄.</p>
+</div>
+
+<!-- 덮고 쓰기 — 시험지 앞 · 새 쪽 · 항목 5~12개 · 각 한 줄 ≤45자 · 이름 대신 힌트만 -->
+<div class="recall">
+<h3>덮고 쓰기 &mdash; N권</h3>
+<p class="how">보기 없이 아래 뼈대를 채운다. 못 채우면 그 항목의 도표로 돌아간다.</p>
+<p>1. 첫 항목 힌트 (도표 1)</p><div class="line"></div>
+<p>2. 둘째 항목 힌트 (만화 1)</p><div class="line"></div>
+<p>3. 셋째 항목 힌트 (예시 1)</p><div class="line"></div>
+</div>
+
+<!-- 시험 — 문항마다 div.qa 하나 · 유형 태그 span.qtype · 답안줄 div.line · 설명형 1문항 필수 · 쉬움→어려움 -->
+<div class="exam">
+<h3>시험문제 &mdash; N권</h3>
+<div class="info">3문항 · 객관식 · 단답 · 서술 혼합 · 합격선 2개</div>
+<div class="qa"><div class="q"><span class="qtype">객관식</span>Q1. 질문? (책 a쪽)</div>
+<div class="opts"><div>① …</div><div>② …</div><div>③ …</div><div>④ …</div></div></div>
+<div class="qa"><div class="q"><span class="qtype">단답</span>Q2. 질문? (책 b쪽)</div><div class="line"></div></div>
+<div class="qa"><div class="q"><span class="qtype hard">설명</span>Q3. 이 장의 핵심을 <b>처음 듣는 사람에게 3문장으로</b> 설명하시오. 전문용어 없이.</div><div class="line"></div><div class="line"></div></div>
+</div>
+
+<!-- 정답 — 반드시 새 쪽 · 정답 + 왜 · 헷갈리는 오답은 .why · 서술형은 뼈대 3~4개 · 끝에 합격선 -->
+<div class="answers">
+<h3>정답 및 해설</h3>
+<div class="a"><b>A1 &rarr; ②</b> 근거 한 줄. <div class="why"><b>왜 ①이 아닌가</b> &mdash; …</div> (도표 1)</div>
+<div class="a"><b>A2.</b> 정답. (만화 1)</div>
+<div class="a"><b>A3.</b> 포함해야 할 요소 &mdash; ⓐ … ⓑ … ⓒ … (예시 1) &rarr; 본문 §1 참조</div>
+<div class="cut"><b>몇 개 맞았나요? &mdash; 합격선 2개</b>
+<p><b>3개</b> &mdash; 다음 권으로.</p>
+<p><b>2개</b> &mdash; 통과. 틀린 문항의 도표를 한 번 더 보고 넘어간다.</p>
+<p><b>1개 이하</b> &mdash; 덮고 쓰기부터 다시 채운 뒤 재응시.</p>
+<div class="warn2"><b>급소 3문항</b> &mdash; Q1 · Q2 · Q3. 셋 중 둘 이상 틀리면 통과해도 이 권을 다시 읽는다.</div>
+</div>
+</div>
+
+<!-- 튜터 프롬프트 — 정답지 뒤 · 그 권 전용으로 채워 복사만 하면 되게 · 규칙 네 줄 유지 · 짧게 -->
+<div class="tutor">
+<h4>이 권을 제대로 이해했는지 확인하려면</h4>
+<div class="how">아래를 그대로 복사해 AI에게 붙여 넣는다. 한 번에 한 질문, 강의 금지.</div>
+<pre>
+너는 『책 제목』 N권 — 장 제목(책 a~b쪽)의 튜터다. 한 번에 한 질문만 하고, 내가 답하면
+맞았는지 · 빠진 것이 무엇인지만 짧게 말한 뒤 다음 질문으로 넘어간다. 강의하지 마라.
+내가 막히면 힌트를 한 줄만 준다.
+
+질문 순서:
+1. 핵심 개념 1 · 2 · 3 (a~c쪽)
+2. 규칙과 예외 (c~b쪽)
+3. 적용 — 내 상황에 대입
+
+끝나면 합격선(3문항 중 2개)을 기준으로 다시 볼 도표 번호만 알려 줘라.
+</pre>
+</div>
+
+</body></html>

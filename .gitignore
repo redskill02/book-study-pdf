@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+_*.txt
+_*.png
+_*.log
+*.pdf
+crops/
+out*/
+_src/
+_src300/
+_mineru_in/
+pdf/
+.DS_Store
+Thumbs.db

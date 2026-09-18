@@ -1,0 +1,5 @@
+# 스킬 스크립트 공통 (MinerU 는 별도 venv 에 설치 — references/pipeline.md)
+pymupdf>=1.24
+pillow>=10
+numpy>=1.26
+pypdfium2>=4.30

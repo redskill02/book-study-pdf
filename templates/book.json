@@ -1,0 +1,17 @@
+{
+  "book": "책 제목",
+  "mode": "digest",
+  "figures": "redraw",
+  "output": "책 제목_학습노트_전권합본.pdf",
+  "deploy": "C:/path/to/_학습노트/책 제목",
+  "titles": {
+    "_front": "표지 · 차례 · 사용법",
+    "ch01": "1권 장 제목 (책 11~30)",
+    "ch99": "총정리 — 지도 · 용어집 · 종합시험"
+  },
+  "chapter_files": {
+    "_front": "00_표지_차례.pdf",
+    "ch01": "01_1권_장제목.pdf",
+    "ch99": "99_총정리_종합시험.pdf"
+  }
+}

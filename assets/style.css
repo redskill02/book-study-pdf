@@ -1,0 +1,191 @@
+/* $100M Offers 한국어 학습노트 — 인쇄용 스타일 */
+
+@page { size: A4; margin: 17mm 15mm 15mm; }
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-size: 10pt; line-height: 1.78; color: #1a1a1a;
+  margin: 0; word-break: keep-all; overflow-wrap: break-word;
+}
+
+/* ---- 챕터 표지 ---- */
+.cover { height: 245mm; display: flex; flex-direction: column; justify-content: center;
+         page-break-after: always; text-align: center; }
+.cover .book { font-size: 11pt; letter-spacing: 3px; color: #888; margin-bottom: 10px; }
+.cover .num  { font-size: 52pt; font-weight: 800; line-height: 1; color: #222; }
+.cover .kr   { font-size: 25pt; font-weight: 800; margin-top: 10px; }
+.cover .en   { font-size: 12pt; color: #777; margin-top: 8px; letter-spacing: 1px; }
+.cover .rule { width: 78px; height: 4px; background: #222; margin: 26px auto; }
+.cover .meta { font-size: 9.5pt; color: #666; line-height: 2; }
+
+/* ---- 제목 ---- */
+h1 { font-size: 17pt; margin: 0 0 14px; padding-bottom: 7px; border-bottom: 3px solid #222; }
+h2 { font-size: 13.5pt; margin: 26px 0 10px; padding: 4px 0 4px 11px;
+     border-left: 6px solid #222; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 20px 0 7px; color: #000; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 15px 0 5px; color: #333; page-break-after: avoid; }
+p  { margin: 8px 0; }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 11px 0; font-size: 9.3pt;
+        page-break-inside: avoid; }
+th, td { border: 1px solid #c4c4c4; padding: 5px 8px; vertical-align: top; }
+th { background: #eeeeee; font-weight: 700; text-align: left; }
+td.c, th.c { text-align: center; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---- 박스 ---- */
+.quote { border-left: 5px solid #333; background: #f7f7f7; padding: 11px 15px;
+         margin: 13px 0; font-size: 10pt; page-break-inside: avoid; }
+.quote .who { display: block; text-align: right; color: #666; font-size: 9pt; margin-top: 6px; }
+.key { background: #1f2937; color: #fff; padding: 13px 17px; border-radius: 7px;
+       margin: 15px 0; font-size: 11pt; font-weight: 700; page-break-inside: avoid; }
+.note { background: #f1f5f9; border-left: 5px solid #475569; padding: 10px 14px;
+        margin: 12px 0; font-size: 9.5pt; page-break-inside: avoid; }
+.warn { background: #fff7ed; border-left: 5px solid #c2610c; padding: 10px 14px;
+        margin: 12px 0; font-size: 9.5pt; page-break-inside: avoid; }
+.kr-case { background: #eef3ff; border: 1.5px solid #b9c6ee; border-radius: 8px;
+           padding: 12px 15px; margin: 14px 0; page-break-inside: avoid; }
+.kr-case h4 { margin-top: 0; color: #1e3a8a; }
+.kr-case .tag { display: inline-block; background: #1e3a8a; color: #fff; font-size: 8pt;
+                padding: 2px 8px; border-radius: 10px; margin-bottom: 7px; }
+
+/* ---- 그림 ---- */
+figure { margin: 15px 0; page-break-inside: avoid; text-align: center; }
+figure svg, figure img { max-width: 100%; height: auto; }
+figcaption { font-size: 8.5pt; color: #555; margin-top: 6px; line-height: 1.55; }
+.figbox { border: 1.5px solid #dcdcdc; border-radius: 9px; padding: 12px; background: #fcfcfc; }
+svg text { font-family: "Malgun Gothic", sans-serif; }
+
+/* ---- 퀴즈 ---- */
+.quiz { border: 2px solid #222; border-radius: 9px; padding: 14px 17px; margin: 16px 0; }
+.quiz .q { margin: 11px 0 4px; font-weight: 700; font-size: 9.8pt; }
+.quiz .opts { font-size: 9.3pt; color: #333; margin-left: 4px; }
+.answers { background: #fafafa; border: 1.5px dashed #999; border-radius: 9px;
+           padding: 13px 17px; margin: 14px 0; font-size: 9.2pt; }
+.answers .a { margin: 9px 0; }
+.answers b { color: #b91c1c; }
+
+/* ---- 기타 ---- */
+.lead { font-size: 10.5pt; color: #333; background: #fafafa; border-radius: 7px;
+        padding: 11px 15px; margin-bottom: 16px; }
+code { font-family: Consolas, monospace; background: #f0f0f0; padding: 1px 5px;
+       border-radius: 3px; font-size: 9pt; }
+/* overflow:hidden 이면 긴 줄이 '조용히' 잘린다 — 렌더를 봐야만 안다.
+   글자를 줄이고, 그래도 넘치면 잘리지 말고 접히게 한다. */
+pre { background: #f6f6f6; border-left: 4px solid #999; padding: 10px 13px;
+      font-family: Consolas, monospace; font-size: 8.4pt; line-height: 1.55;
+      page-break-inside: avoid; white-space: pre-wrap; overflow-wrap: anywhere; }
+ul, ol { margin: 8px 0; padding-left: 22px; }
+li { margin: 4px 0; }
+hr { border: none; border-top: 1.5px solid #ddd; margin: 22px 0; }
+.term td:first-child { font-weight: 700; }
+.pagebreak { page-break-before: always; }
+.avoid { page-break-inside: avoid; }
+.small { font-size: 8.8pt; color: #666; }
+
+/* ── 시험문제 (챕터 끝) ─────────────────────────── */
+.exam { border: 2px solid #222; border-radius: 9px; padding: 15px 18px; margin: 18px 0;
+        page-break-inside: auto; }
+.exam > h3 { border: none; padding: 0; margin: 0 0 4px; font-size: 12pt; }
+.exam .info { font-size: 8.8pt; color: #666; margin-bottom: 12px; }
+.exam .q { margin: 13px 0 5px; font-weight: 700; font-size: 9.9pt;
+           page-break-after: avoid; }
+.exam .qtype { display: inline-block; font-size: 7.6pt; font-weight: 800; color: #fff;
+               background: #4b5563; border-radius: 3px; padding: 1px 6px;
+               margin-right: 6px; vertical-align: 1.5px; letter-spacing: .3px; }
+.exam .qtype.hard { background: #1f2937; }
+.exam .opts { font-size: 9.3pt; color: #333; margin-left: 4px; }
+.exam .opts div { margin: 2px 0; }
+/* 답안줄이 문항과 떨어져 다음 장으로 넘치면 빈 페이지가 생긴다 */
+.exam .blank { border-bottom: 1px solid #bbb; height: 15px; margin: 7px 0 3px 4px;
+               page-break-before: avoid; }
+.exam .grp { border-top: 1px dashed #ccc; margin-top: 15px; padding-top: 4px; }
+.exam .grp b { font-size: 9.2pt; color: #555; }
+
+/* 정답지는 반드시 새 쪽에서 시작 — 같은 쪽에 보이면 시험이 안 된다 */
+.answers { page-break-before: always; }
+.answers .a { margin: 10px 0; page-break-inside: avoid; }
+.answers .why { font-size: 8.9pt; color: #666; margin: 3px 0 0 12px; }
+.answers .why b { color: #666; }
+
+/* 튜터 프롬프트 — 정답지 뒤. 독자가 복사해 AI에 붙여넣는 블록.
+   PDF는 정적이라 대화형 점검을 못 넣지만, 프롬프트는 인쇄할 수 있다. */
+.tutor { border: 1.5px solid #2f4fa8; border-left: 6px solid #2f4fa8; border-radius: 9px;
+         background: #eef3fa; padding: 13px 16px; margin: 16px 0;
+         page-break-inside: avoid; }
+.tutor h4 { margin: 0 0 5px; padding: 0; border: none;
+            font-size: 10.2pt; color: #2f4fa8; }
+.tutor .how { font-size: 8.8pt; color: #555; margin-bottom: 9px; }
+.tutor pre { background: #fff; border: 1px dashed #a8bdd6; border-radius: 6px;
+             padding: 10px 12px; margin: 0; font-family: Consolas, monospace;
+             font-size: 8.9pt; line-height: 1.55; white-space: pre-wrap; color: #1f2937; }
+
+/* 학습 계획표 (_front.html) — 목차 다음. 행 단위로만 쪽나눔을 막는다(함정 #8) */
+.plan table { page-break-inside: auto; }
+.plan tr { page-break-inside: avoid; }
+.plan .out { color: #2f4fa8; font-weight: 700; }
+
+/* 원문 예시와 한국 사례가 어디서 갈리는지 밝히는 줄 (digest 모드) */
+.kr-case .cmp { border-top: 1px dashed #b9c6ee; margin-top: 9px; padding-top: 7px;
+                font-size: 9.2pt; color: #44618c; }
+
+/* ---------------------------------------------------------------
+   덮고 쓰기 (회상 지면) — 원칙 ① 인출. 장 끝, 시험지 앞.
+   뼈대와 '개수'만 인쇄하고 내용은 비운다. 책을 덮고 채우는 자리다.
+   --------------------------------------------------------------- */
+.recall { page-break-before: always; border: 1.5px solid #1f2937; border-radius: 9px;
+          padding: 15px 18px 18px; margin: 16px 0; }
+.recall h3 { margin: 0 0 4px; padding: 0; border: none; font-size: 11pt; }
+.recall .how { font-size: 8.8pt; color: #555; margin-bottom: 12px; }
+.recall .cnt { display: inline-block; border: 1.5px solid #1f2937; border-radius: 5px;
+               padding: 1px 9px; margin: 0 3px; font-weight: 800; }
+.recall ol { margin: 0; padding-left: 22px; }
+/* 손으로 쓰는 자리다. 줄 높이를 줄이면 쓸 수가 없다 — 한 쪽을 다 쓰는 것이 정상이다 */
+.recall li { margin: 0 0 30px; }
+.recall .line { border-bottom: 1px solid #bbb; height: 32px; margin: 0; }
+.recall .hint { font-size: 8.6pt; color: #777; margin-bottom: 2px; }
+.recall .after { border-top: 1px dashed #ccc; margin-top: 14px; padding-top: 8px;
+                 font-size: 8.9pt; color: #555; }
+
+/* 합격선 — 원칙 ⑦ 메타인지. 정답지 맨 끝. */
+.answers .cut { border: 1.5px solid #1f2937; border-radius: 8px; background: #f4f4f4;
+                padding: 11px 14px; margin-top: 16px; page-break-inside: avoid; }
+.answers .cut b { color: #1f2937; }
+.answers .cut .warn2 { margin-top: 7px; font-size: 9pt; color: #7a2e2e; }
+
+/* 계획표의 복습 칸 — 원칙 ② 분산. 오늘 '꺼낼' 것. */
+.plan .rev { color: #1f2937; font-weight: 700; background: #f4f4f4; }
+.plan .spare td { background: #fafafa; color: #555; font-style: italic; }
+
+/* ---- 원본 차트 크롭 + 한글 주석 오버레이 (주식/차트 도서 전용) ---- */
+figure.chart .wrap { position: relative; display: inline-block; line-height: 0;
+        max-width: 100%; }
+/* 세로로 긴 차트가 지면을 넘겨 통째로 다음 쪽으로 밀리는 것을 막는다.
+   .wrap 이 inline-block 이라 이미지에 밀착하고, 오버레이 SVG도 같이 줄어든다. */
+figure.chart .wrap img { display: block; width: auto; height: auto;
+        max-width: 100%; max-height: 166mm;
+        border: 1px solid #d4d4d4; border-radius: 4px; background: #fff; }
+figure.chart.tall .wrap img { max-height: 210mm; }   /* 캡션이 짧을 때만 */
+figure.chart.half .wrap img { max-height: 100mm; }   /* 차트 둘을 한 쪽에 — 가로형 차트 두 장 */
+figure.chart .wrap svg.anno { position: absolute; left: 0; top: 0;
+        width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+/* 마커: 흰 테두리를 둘러 어떤 배경 위에서도 읽히게 한다 */
+svg.anno .mk  { fill: #b91c1c; stroke: #fff; stroke-width: 2.4; }
+svg.anno .mkt { fill: #fff; font-weight: 800; text-anchor: middle; }
+svg.anno .ar  { stroke: #b91c1c; stroke-width: 2.4; fill: none;
+        stroke-linecap: round; marker-end: url(#ah); }
+svg.anno .bx  { fill: none; stroke: #b91c1c; stroke-width: 2.2; stroke-dasharray: 7 4; }
+svg.anno .lb  { fill: #b91c1c; font-weight: 800; paint-order: stroke;
+        stroke: #fff; stroke-width: 11; stroke-linejoin: round; }
+svg.anno .lbbg { fill: #fff; fill-opacity: .93; }   /* 필요하면 라벨 밑에 깔개 */
+figure.chart figcaption .src { display: inline-block; margin-left: 6px;
+        color: #888; font-size: 7.6pt; white-space: nowrap; }
+figure.chart figcaption .old { color: #c2610c; font-weight: 700; }
+
+.exam .qa { page-break-inside: avoid; break-inside: avoid; }
+.exam .line { border-bottom: 1px solid #bbb; height: 26px; margin: 6px 0 3px 4px;
+              page-break-before: avoid; }
+.kr-case .tag { margin-bottom: 7px; margin-right: 7px; }
